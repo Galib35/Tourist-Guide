@@ -1,0 +1,797 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".Description"
+    tools:ignore="SpeakableTextPresentCheck">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="10dp">
+
+        <ProgressBar
+            android:id="@+id/pr_des"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone"/>
+
+
+        <TextView
+            android:id="@+id/des_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/tourist_spots"
+            android:fontFamily="@font/merienda_one"
+            android:textStyle="bold"
+            android:textSize="24sp"
+            android:textColor="@color/text"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/allerta"
+            android:text="@string/description_main"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="21sp" />
+
+        <TextView
+            android:id="@+id/des_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="sans-serif"
+            android:text="@string/description"
+            android:textSize="20sp"
+            android:justificationMode="inter_word"
+            android:textColor="#2B2A2A"
+            tools:targetApi="o" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/allerta"
+                android:text="@string/approximate_cost"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="21sp" />
+            <TextView
+                android:id="@+id/des_tk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tk"
+                android:layout_marginStart="5dp"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:fontFamily="@font/allerta"
+                android:textColor="@color/orange"/>
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/weather_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:cardCornerRadius="10dp"
+            android:elevation="10dp"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/weather_background"
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+                    <ImageView
+                        android:id="@+id/weather_icon"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/weather_icon"
+                        android:layout_centerVertical="true"/>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@+id/weather_icon"
+                        android:layout_centerVertical="true"
+                        >
+                        <TextView
+                            android:id="@+id/curr_temp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0°C"
+                            android:textColor="@color/text"
+                            android:textStyle="bold"
+                            android:textSize="22sp"
+
+                            />
+
+                        <TextView
+                            android:id="@+id/feel_temp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Feels like: 0°C"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            android:textSize="18sp"
+                            android:layout_below="@+id/curr_temp"
+                            />
+                        <TextView
+                            android:id="@+id/humidity"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Humidity: 0%"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            android:textSize="18sp"
+                            android:layout_below="@+id/feel_temp"
+                            />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/weather_cond"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="status"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:textSize="20sp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=">>"
+                        android:textColor="#899ebf"
+                        android:textStyle="bold"
+                        android:textSize="20sp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="10dp"
+                        />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/weather_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="description"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    />
+
+
+                <!--<androidx.cardview.widget.CardView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    app:cardElevation="10dp"
+                    app:cardCornerRadius="10dp"
+                    android:layout_margin="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#899ebf"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="25°C"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            android:textSize="18sp"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="5dp"
+                            />
+                        <ImageView
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:src="@drawable/weather_night"
+                            android:layout_gravity="center"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="scattered clouds"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            android:textSize="18sp"
+                            android:layout_gravity="center"
+                            android:textAlignment="center"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="7AM"
+                            android:textColor="#3f4e6d"
+                            android:textStyle="bold"
+                            android:textSize="18sp"
+                            android:layout_gravity="center"
+                            android:layout_margin="5dp"
+
+                            />
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>-->
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+
+
+        <GridLayout
+            android:id="@+id/grid"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:alignmentMode="alignMargins"
+            android:rowCount="5"
+            android:columnCount="2"
+            >
+
+            <androidx.cardview.widget.CardView
+                android:layout_height="150dp"
+                android:layout_width="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:clipToPadding="false"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="8dp"
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/places_background"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true">
+
+                        <ImageView
+                            android:id="@+id/gallery_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/ic_baseline_image_gallery"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/gallery_icon"
+                            android:text="@string/gallery"
+                            android:textSize="24sp"
+                            android:fontFamily="@font/baloo"
+                            android:textColor="@color/black"
+                             />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_height="150dp"
+                android:layout_width="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:clipToPadding="false"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="8dp"
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/places_background"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true">
+
+                        <!--<ImageView
+                            android:id="@+id/star_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_baseline_grade" />-->
+
+                        <androidx.appcompat.widget.AppCompatRatingBar
+                            android:id="@+id/rating_icon"
+                            style="@style/Widget.AppCompat.RatingBar.Indicator"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:isIndicator="true"
+                            android:numStars="1"
+                            android:rating=".7"
+                            android:scaleX="0.8"
+                            android:scaleY="0.8"
+                            android:stepSize="0.1"
+                            android:transformPivotX="0dp"
+                            android:transformPivotY="0dp"
+                            tools:ignore="SpeakableTextPresentCheck" />
+
+                        <TextView
+                            android:id="@+id/rating_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/rating_icon"
+                            android:layout_centerHorizontal="true"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="3.5/5 (170)"
+                            android:textColor="@color/black"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/rating_text"
+                            android:layout_centerHorizontal="true"
+                            android:fontFamily="@font/baloo"
+                            android:text="@string/ratings_amp_nreviews"
+                            android:textColor="@color/black"
+                            android:textSize="24sp" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_height="150dp"
+                android:layout_width="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:clipToPadding="false"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="8dp"
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/places_background"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true">
+
+                        <ImageView
+                            android:id="@+id/plan_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/ic_baseline_travel_explore" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/plan_icon"
+                            android:fontFamily="@font/baloo"
+                            android:text="@string/tour_plan"
+                            android:textColor="@color/black"
+                            android:textSize="24sp" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_height="150dp"
+                android:layout_width="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:clipToPadding="false"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="8dp"
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/places_background"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true">
+
+                        <ImageView
+                            android:id="@+id/spot_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/ic_baseline_tour"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/spot_icon"
+                            android:text="@string/attractions"
+                            android:textSize="24sp"
+                            android:fontFamily="@font/baloo"
+                            android:textColor="@color/black"
+                            />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_height="150dp"
+                android:layout_width="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:clipToPadding="false"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="8dp"
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/places_background"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true">
+
+                        <ImageView
+                            android:id="@+id/hotel_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/ic_baseline_hotel"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/hotel_icon"
+                            android:text="@string/hotel"
+                            android:textSize="24sp"
+                            android:fontFamily="@font/baloo"
+                            android:textColor="@color/black"
+                            />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_height="150dp"
+                android:layout_width="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:clipToPadding="false"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="8dp"
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/places_background"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true">
+
+                        <ImageView
+                            android:id="@+id/rest_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/ic_baseline_restaurant"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/rest_icon"
+                            android:text="@string/restaurant"
+                            android:textSize="24sp"
+                            android:fontFamily="@font/baloo"
+                            android:textColor="@color/black"
+                            />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_height="150dp"
+                android:layout_width="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:clipToPadding="false"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="8dp"
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/places_background"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true">
+
+                        <ImageView
+                            android:id="@+id/atm_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/ic_baseline_local_atm"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/atm_icon"
+                            android:text="@string/atm_bank"
+                            android:textSize="24sp"
+                            android:fontFamily="@font/baloo"
+                            android:textColor="@color/black"
+                            />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_height="150dp"
+                android:layout_width="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:clipToPadding="false"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="8dp"
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/places_background"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true">
+
+                        <ImageView
+                            android:id="@+id/hospital_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/ic_baseline_local_hospital"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/hospital_icon"
+                            android:text="@string/hospital"
+                            android:textSize="24sp"
+                            android:fontFamily="@font/baloo"
+                            android:textColor="@color/black"
+                            />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_height="150dp"
+                android:layout_width="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:clipToPadding="false"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="8dp"
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/places_background"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true">
+
+                        <ImageView
+                            android:id="@+id/police_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/ic_baseline_local_police"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/police_icon"
+                            android:text="@string/police_station"
+                            android:textSize="24sp"
+                            android:fontFamily="@font/baloo"
+                            android:textColor="@color/black"
+                            />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_height="150dp"
+                android:layout_width="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:clipToPadding="false"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="8dp"
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/places_background"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true">
+
+                        <ImageView
+                            android:id="@+id/special_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/ic_baseline_folder_special"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/special_icon"
+                            android:text="@string/speciality"
+                            android:textSize="24sp"
+                            android:fontFamily="@font/baloo"
+                            android:textColor="@color/black"
+                            />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_height="150dp"
+                android:layout_width="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:clipToPadding="false"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="8dp"
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/places_background"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true">
+
+                        <ImageView
+                            android:id="@+id/more_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/ic_baseline_read_more_64"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/more_icon"
+                            android:text="More Info."
+                            android:textSize="24sp"
+                            android:fontFamily="@font/baloo"
+                            android:textColor="@color/black"
+                            />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </GridLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/go_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/let_s_go"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:background="@drawable/start_button"
+            android:padding="10dp"
+            android:drawableEnd="@drawable/ic_baseline_directions_run"
+            android:drawablePadding="5dp"
+            />
+
+    </LinearLayout>
+
+</ScrollView>

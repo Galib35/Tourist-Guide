@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/acc"
+            android:title="@string/account"
+            android:icon="@drawable/ic_twotone_account"
+            />
+        <item
+            android:id="@+id/fv_list"
+            android:title="@string/favourite_list"
+            android:icon="@drawable/ic_twotone_favorite_menu"
+            />
+        <item
+            android:id="@+id/hist"
+            android:title="@string/tour_history"
+            android:icon="@drawable/ic_twotone_history"
+            />
+        <item
+            android:id="@+id/rev"
+            android:title="@string/your_reviews"
+            android:icon="@drawable/ic_twotone_reviews"
+            />
+        <item
+            android:id="@+id/vlog"
+            android:title="@string/your_vlog"
+            android:icon="@drawable/ic_twotone_reviews"
+            />
+        <item
+            android:id="@+id/blog"
+            android:title="@string/your_blog"
+            android:icon="@drawable/ic_baseline_note_alt_24"
+            />
+        <item
+            android:id="@+id/sugg"
+            android:title="@string/any_suggestion"
+            android:icon="@drawable/ic_twotone_feedback"
+            />
+        <!--<item
+            android:id="@+id/adm"
+            android:title="@string/admin"
+            android:icon="@drawable/ic_twotone_admin_panel_settings"
+            android:visible="false"
+            />-->
+        <item
+            android:id="@+id/log"
+            android:title="@string/log_out"
+            android:icon="@drawable/ic_twotone_logout"
+            />
+    </group>
+
+</menu>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="10dp"
+    app:cardCornerRadius="10dp"
+    android:layout_margin="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/places_background"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/plc_nm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/baloo"
+            android:paddingStart="10dp"
+            android:paddingTop="10dp"
+            android:text="@string/tourist_spots"
+            android:textColor="#01022B"
+            android:textSize="26sp"
+            tools:ignore="RtlSymmetry" />
+
+        <TextView
+            android:id="@+id/plc_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/aclonica"
+            android:paddingStart="10dp"
+            android:text="@string/tag"
+            android:textColor="#03A6AC"
+            android:textSize="18sp"
+            tools:ignore="RtlSymmetry" />
+
+     <RelativeLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_margin="5dp">
+
+         <RatingBar
+             android:id="@+id/rt"
+             style="@style/Widget.AppCompat.RatingBar.Indicator"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginStart="5dp"
+             android:isIndicator="true"
+             android:stepSize="0.1"
+             android:numStars="5"
+             android:rating="3.5"
+             android:scaleX="0.8"
+             android:scaleY="0.8"
+             android:transformPivotX="0dp"
+             android:transformPivotY="0dp"
+             tools:ignore="SpeakableTextPresentCheck" />
+
+         <TextView
+             android:id="@+id/plc_rating"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignEnd="@+id/rt"
+             android:text="3.5"
+             android:textSize="20sp"
+             android:layout_centerVertical="true"/>
+         <ImageView
+             android:id="@+id/fav_false"
+             android:layout_width="32dp"
+             android:layout_height="32dp"
+             android:layout_marginEnd="5dp"
+             android:src="@drawable/ic_baseline_favorite_false"
+             android:layout_alignParentEnd="true"
+             android:layout_centerVertical="true"
+             />
+
+         <ImageView
+             android:id="@+id/fav_true"
+             android:layout_width="32dp"
+             android:layout_height="32dp"
+             android:layout_marginEnd="5dp"
+             android:src="@drawable/ic_baseline_favorite_true"
+             android:layout_alignParentEnd="true"
+             android:layout_centerVertical="true"
+             android:visibility="gone"/>
+     </RelativeLayout>
+
+
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

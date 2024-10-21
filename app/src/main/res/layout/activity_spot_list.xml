@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
+    tools:context=".SpotList">
+
+    <ProgressBar
+        android:id="@+id/pr_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:visibility="gone"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:fontFamily="@font/merienda_one"
+        android:text="@string/tourist_spots"
+        android:textColor="#1EDFAA"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_margin="20dp"/>
+
+    <EditText
+        android:id="@+id/search_edt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:autofillHints="Cox's Bazar"
+        android:background="@drawable/search_background"
+        android:drawableEnd="@drawable/ic_baseline_search_24"
+        android:hint="@string/search"
+        android:inputType="text"
+        android:padding="15dp"
+        android:textSize="20sp"
+        tools:ignore="LabelFor"
+        />
+
+    <RadioGroup
+        android:id="@+id/filter_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        >
+        <RadioButton
+            android:id="@+id/filter_spot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Spot"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:checked="true"/>
+        <RadioButton
+            android:id="@+id/filter_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tag"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"/>
+        <RadioButton
+            android:id="@+id/filter_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="City"
+            android:textSize="18sp"
+            android:textColor="@color/black"/>
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/noth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:text="@string/nothing_to_show"
+        android:textSize="24sp"
+        android:textColor="#FF0000"
+        android:visibility="gone"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        >
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+</LinearLayout>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center_horizontal"
+        android:text="Rate Place!"
+        android:fontFamily="@font/merienda_one"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:textColor="@color/text"/>
+
+    <androidx.appcompat.widget.AppCompatRatingBar
+        android:id="@+id/rt_dlg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:stepSize="0.5"
+        android:numStars="5"
+        android:layout_gravity="center"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:hint="@string/review"
+        android:overScrollMode="always"
+        android:scrollbarStyle="insideInset"
+        android:scrollbars="vertical"
+        app:boxStrokeColor="@color/text"
+        app:boxStrokeWidthFocused="2dp"
+        app:hintTextColor="@color/black">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/rev_dlg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top"
+            android:inputType="textMultiLine"
+            android:lines="3"
+            android:textColor="@color/black"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/not_btn_dlg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/not_now"
+            android:textAllCaps="false"
+            android:background="@drawable/button2"
+            android:layout_gravity="end"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:padding="10dp"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/submit_btn_dlg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:text="@string/submit"
+            android:textAllCaps="false"
+            android:background="@drawable/button2"
+            android:layout_gravity="end"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            />
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>

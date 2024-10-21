@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:cardElevation="10dp"
+    app:cardCornerRadius="10dp"
+    android:layout_margin="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/places_background"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/booking_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10-27-2023"
+                android:textColor="@color/light_navy"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="10dp"
+
+                />
+            <TextView
+                android:id="@+id/booking_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="06:00"
+                android:textColor="@color/light_navy"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:layout_alignParentEnd="true"
+                />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/pcg_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/baloo"
+            android:paddingStart="10dp"
+            android:paddingTop="10dp"
+            android:text="@string/title"
+            android:textColor="#01022B"
+            android:textSize="20sp"
+            tools:ignore="RtlSymmetry" />
+
+        <TextView
+            android:id="@+id/pcg_loc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/aclonica"
+            android:paddingStart="10dp"
+            android:text="@string/location"
+            android:textColor="#03A6AC"
+            android:textSize="18sp"
+            tools:ignore="RtlSymmetry" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp">
+
+            <TextView
+                android:id="@+id/pcg_dur"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3 days, 2 nights"
+                android:textSize="18sp"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/pcg_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:text="5000tk"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/orange"
+                />
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tourist Info."
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:layout_marginStart="10dp"
+            android:textStyle="bold"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp">
+            <TextView
+                android:id="@+id/t_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/name"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                />
+            <TextView
+                android:id="@+id/t_contact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="10dp"
+                android:text="01725634178"
+                android:textSize="18sp"
+                android:textColor="@color/black"/>
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="5dp">
+
+            <TextView
+                android:id="@+id/jr_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tour date: 17/20/23"
+                android:textSize="18sp"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/t_member"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:text="10 persons"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tr_capacity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tourist_capacity"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:layout_marginStart="10dp"/>
+        <RelativeLayout
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_gravity="center">
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/booking_accept"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button2"
+                android:text="Accept"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="18sp"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/booking_reject"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true"
+                android:background="@drawable/button4"
+                android:text="Reject"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

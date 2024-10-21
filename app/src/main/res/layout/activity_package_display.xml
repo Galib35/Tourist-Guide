@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".PackageDisplay">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <com.smarteist.autoimageslider.SliderView
+            android:id="@+id/imgSlider_pcg_dis"
+            android:layout_width="match_parent"
+            android:layout_height="275dp"
+            app:sliderAnimationDuration="600"
+            app:sliderAutoCycleDirection="back_and_forth"
+            app:sliderAutoCycleEnabled="true"
+            app:sliderIndicatorAnimationDuration="600"
+            app:sliderIndicatorGravity="center_horizontal|bottom"
+            app:sliderIndicatorMargin="15dp"
+            app:sliderIndicatorOrientation="horizontal"
+            app:sliderIndicatorPadding="3dp"
+            app:sliderIndicatorRadius="2dp"
+            app:sliderIndicatorSelectedColor="#5A5A5A"
+            app:sliderIndicatorUnselectedColor="#FFF"
+            app:sliderScrollTimeInSec="3"
+            app:sliderStartAutoCycle="true"
+            />
+        <LinearLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"
+            >
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="10dp"
+                app:cardCornerRadius="10dp"
+                android:layout_marginBottom="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:background="@drawable/places_background">
+
+                    <TextView
+                        android:id="@+id/pcg_agency_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/agency_name"
+                        android:textSize="16sp"
+                        android:textColor="#888888"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        />
+                    <TextView
+                        android:id="@+id/pcg_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/baloo"
+                        android:paddingStart="10dp"
+                        android:paddingTop="10dp"
+                        android:text="@string/title"
+                        android:textColor="#01022B"
+                        android:textSize="22sp"
+                        tools:ignore="RtlSymmetry" />
+
+                    <TextView
+                        android:id="@+id/pcg_loc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/aclonica"
+                        android:paddingStart="10dp"
+                        android:text="@string/location"
+                        android:textColor="#03A6AC"
+                        android:textSize="18sp"
+                        tools:ignore="RtlSymmetry" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp">
+
+                        <TextView
+                            android:id="@+id/pcg_dur"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="3 days, 2 nights"
+                            android:textSize="20sp"
+                            android:textColor="@color/black"/>
+
+                        <TextView
+                            android:id="@+id/pcg_price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:text="5000tk"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/orange"
+                            />
+
+
+                    </RelativeLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:hint="Journey Date"
+                        app:boxStrokeColor="@color/text"
+                        app:boxStrokeWidthFocused="2dp"
+                        app:hintTextColor="@color/black"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/pcg_journey_date"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:drawableEnd="@drawable/ic_baseline_calendar_month_24"
+                            android:focusable="false"
+                            android:inputType="none"
+                            android:textColor="@color/black"
+                            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:hint="@string/number_of_tourist"
+                        app:boxStrokeColor="@color/text"
+                        app:boxStrokeWidthFocused="2dp"
+                        app:hintTextColor="@color/black"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/pcg_tourist_no"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+                            android:textColor="@color/black"
+                            android:text="1"
+                            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/book_btn"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:text="Book"
+                        android:textAllCaps="false"
+                        android:background="@drawable/button3"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:textSize="20sp"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="10dp"
+                app:cardCornerRadius="10dp"
+                android:layout_marginBottom="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:background="@drawable/places_background">
+                    <TextView
+                        android:id="@+id/pcg_contact"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/contact_info"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:layout_margin="10dp"
+                        />
+                    <TextView
+                        android:id="@+id/email_pcg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="@string/email2"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:justificationMode="inter_word"
+                        tools:targetApi="o"
+                        app:drawableStartCompat="@drawable/ic_outline_email"
+                        android:drawablePadding="10dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/mobile_no"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="@string/phone_no"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:justificationMode="inter_word"
+                        tools:targetApi="o"
+                        app:drawableStartCompat="@drawable/ic_baseline_phone_32"
+                        android:drawablePadding="10dp"
+                        />
+                    <TextView
+                        android:id="@+id/whatsapp_no"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="Whatsapp:"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:justificationMode="inter_word"
+                        tools:targetApi="o"
+                        app:drawableStartCompat="@drawable/whatsapp"
+                        android:drawablePadding="10dp"
+                        />
+
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!--<androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="10dp"
+                app:cardCornerRadius="10dp"
+                android:layout_marginBottom="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/places_background"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/pdct_details"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="@string/details"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/desc_detail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:justificationMode="inter_word"
+                        android:text="@string/description"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        tools:targetApi="o" />
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>-->
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+</ScrollView>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background"
+    tools:context=".PackageListUser">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+        <ProgressBar
+            android:id="@+id/pr_pcg_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone"/>
+        <TextView
+            android:id="@+id/des_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/tour_packages"
+            android:fontFamily="@font/merienda_one"
+            android:textStyle="bold"
+            android:textSize="24sp"
+            android:textColor="@color/text"/>
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/pcg_search_edt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:autofillHints="Cox's Bazar"
+        android:background="@drawable/search_background"
+        android:drawableEnd="@drawable/ic_baseline_search_24"
+        android:hint="Search by spot"
+        android:inputType="text"
+        android:padding="15dp"
+        android:textSize="20sp"
+        tools:ignore="LabelFor"
+        />
+
+    <TextView
+        android:id="@+id/noth_pcg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:text="@string/nothing_to_show"
+        android:textSize="24sp"
+        android:textColor="#FF0000"
+        android:visibility="gone"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/pcg_recView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        />
+
+</LinearLayout>

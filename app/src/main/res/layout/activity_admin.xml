@@ -1,0 +1,1341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".Admin">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/admin_panel"
+            android:fontFamily="@font/merienda_one"
+            android:textStyle="bold"
+            android:textSize="24sp"
+            android:textColor="@color/text"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/add"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/add_new"
+                    android:textAllCaps="false"
+                    android:background="@drawable/button2"
+                    android:textColor="@color/black"
+                    android:drawableStart="@drawable/ic_baseline_add_24"
+                    android:textStyle="bold"
+                    android:textSize="22sp"
+                    android:padding="10dp"
+                    android:elevation="10dp"/>
+
+                <LinearLayout
+                    android:id="@+id/add_v"
+                    android:layout_width="150dp"
+                    android:layout_height="3dp"
+                    android:background="@color/text"
+                    android:layout_below="@+id/add"
+                    android:orientation="vertical"
+                    android:visibility="invisible"
+
+                    />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                >
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/update"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tour_plan"
+                    android:textAllCaps="false"
+                    android:background="@drawable/button2"
+                    android:textColor="@color/black"
+                    android:drawableStart="@drawable/ic_baseline_edit_24"
+                    android:textStyle="bold"
+                    android:textSize="22sp"
+                    android:padding="10dp"
+                    android:elevation="10dp"/>
+
+                <LinearLayout
+                    android:id="@+id/update_v"
+                    android:layout_width="150dp"
+                    android:layout_height="3dp"
+                    android:background="@color/text"
+                    android:layout_below="@+id/update"
+                    android:orientation="horizontal"
+                    android:visibility="invisible">
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/message"
+            android:textSize="18sp"
+            android:textColor="#FF0000"
+            android:layout_marginTop="10dp"
+            android:justificationMode="inter_word"
+            tools:targetApi="o" />
+
+        <RelativeLayout
+            android:id="@+id/l1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/part1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="10dp"
+
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#F5FBFB">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="20dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/basic_info"
+                                android:textColor="@color/black"
+                                android:fontFamily="@font/baloo"
+                                android:textSize="20sp"/>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:enabled="false"
+                                android:hint="@string/place_id"
+                                app:boxStrokeColor="@color/text"
+                                app:boxStrokeWidthFocused="2dp"
+                                app:endIconTint="@color/black"
+                                app:hintTextColor="@color/black"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                >
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/plc_id"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="text"
+                                    android:textColor="@color/black"
+                                    tools:ignore="SpeakableTextPresentCheck" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:hint="@string/place_name"
+                                app:boxStrokeColor="@color/text"
+                                app:boxStrokeWidthFocused="2dp"
+                                app:hintTextColor="@color/black"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/plc_name"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="text"
+                                    android:textColor="@color/black"
+                                    tools:ignore="SpeakableTextPresentCheck" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:hint="@string/tag"
+                                app:boxStrokeColor="@color/text"
+                                app:boxStrokeWidthFocused="2dp"
+                                app:hintTextColor="@color/black"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/tg"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="text"
+                                    android:textColor="@color/black"
+                                    tools:ignore="SpeakableTextPresentCheck" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:hint="@string/description_input"
+                                android:overScrollMode="always"
+                                android:scrollbarStyle="insideInset"
+                                android:scrollbars="vertical"
+                                app:boxStrokeColor="@color/text"
+                                app:boxStrokeWidthFocused="2dp"
+                                app:hintTextColor="@color/black"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/plc_descrp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="top"
+                                    android:inputType="textMultiLine"
+                                    android:lines="5"
+                                    android:textColor="@color/black"
+                                    tools:ignore="SpeakableTextPresentCheck" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:hint="@string/approximate_cost_input"
+                                app:boxStrokeColor="@color/text"
+                                app:boxStrokeWidthFocused="2dp"
+                                app:hintTextColor="@color/black"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/add_cost"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="number"
+                                    android:textColor="@color/black"
+                                    tools:ignore="SpeakableTextPresentCheck" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:hint="@string/address"
+                                app:boxStrokeColor="@color/text"
+                                app:boxStrokeWidthFocused="2dp"
+                                app:hintTextColor="@color/black"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/spot_address"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="text"
+                                    android:textColor="@color/black"
+                                    tools:ignore="SpeakableTextPresentCheck" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:hint="@string/zip_code"
+                                app:boxStrokeColor="@color/text"
+                                app:boxStrokeWidthFocused="2dp"
+                                app:hintTextColor="@color/black"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/zip_code"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="number"
+                                    android:textColor="@color/black"
+                                    tools:ignore="SpeakableTextPresentCheck" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/rt_edt"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:hint="@string/rating_out_of_5"
+                                app:boxStrokeColor="@color/text"
+                                app:boxStrokeWidthFocused="2dp"
+                                app:hintTextColor="@color/black"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/add_rating"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="numberDecimal"
+                                    android:textColor="@color/black"
+                                    tools:ignore="SpeakableTextPresentCheck" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:id="@+id/plc_save_btn"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="end"
+                                android:layout_marginTop="10dp"
+                                android:background="@drawable/button2"
+                                android:enabled="false"
+                                android:padding="10dp"
+                                android:text="@string/save"
+                                android:textAllCaps="false"
+                                android:textColor="@color/white"
+                                android:textSize="24sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/part2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="10dp"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#F5FBFB">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:layout_margin="20dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/tourist_spots"
+                                android:textColor="@color/black"
+                                android:fontFamily="@font/baloo"
+                                android:textSize="20sp"/>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:hint="@string/place_name"
+                                app:boxStrokeColor="@color/text"
+                                app:boxStrokeWidthFocused="2dp"
+                                app:hintTextColor="@color/black"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                >
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/spot_name"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="text"
+                                    android:textColor="@color/black"
+                                    tools:ignore="SpeakableTextPresentCheck" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:hint="@string/description_input"
+                                app:boxStrokeColor="@color/text"
+                                app:boxStrokeWidthFocused="2dp"
+                                app:hintTextColor="@color/black"
+                                android:scrollbars="vertical"
+                                android:scrollbarStyle="insideInset"
+                                android:overScrollMode="always"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                >
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/spot_descrp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="textMultiLine"
+                                    android:lines="5"
+                                    android:gravity="top"
+                                    android:textColor="@color/black"
+                                    tools:ignore="SpeakableTextPresentCheck" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:id="@+id/spot_upload_btn"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/ic_baseline_camera_alt_24"
+                                    android:layout_gravity="center_vertical"/>
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/img_recView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="#E6E6E6"
+                                    android:layout_margin="10dp"
+                                    >
+                                </androidx.recyclerview.widget.RecyclerView>
+
+                            </LinearLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                >
+                                <androidx.appcompat.widget.AppCompatButton
+                                    android:id="@+id/spot_save_btn"
+                                    android:layout_width="100dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentEnd="true"
+                                    android:text="@string/save"
+                                    android:textAllCaps="false"
+                                    android:background="@drawable/button2"
+                                    android:textColor="@color/white"
+                                    android:textStyle="bold"
+                                    android:textSize="24sp"
+                                    android:padding="10dp"
+                                    android:enabled="false"
+                                    />
+
+                                <androidx.appcompat.widget.AppCompatButton
+                                    android:id="@+id/spot_add_another"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/add_another"
+                                    android:textAllCaps="false"
+                                    android:background="@drawable/button2"
+                                    android:textColor="@color/white"
+                                    android:textStyle="bold"
+                                    android:textSize="22sp"
+                                    android:padding="10dp"
+                                    android:enabled="false"
+                                    />
+
+                            </RelativeLayout>
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/part3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="10dp"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#F5FBFB">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:layout_margin="20dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/hotel"
+                                android:textColor="@color/black"
+                                android:fontFamily="@font/baloo"
+                                android:textSize="20sp"/>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:hint="@string/name"
+                                app:boxStrokeColor="@color/text"
+                                app:boxStrokeWidthFocused="2dp"
+                                app:hintTextColor="@color/black"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                >
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/hotel_name"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="text"
+                                    android:textColor="@color/black"
+                                    tools:ignore="SpeakableTextPresentCheck" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:hint="@string/url"
+                                app:boxStrokeColor="@color/text"
+                                app:boxStrokeWidthFocused="2dp"
+                                app:hintTextColor="@color/black"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                >
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/hotel_url"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="text"
+                                    android:textColor="@color/black"
+                                    tools:ignore="SpeakableTextPresentCheck" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                >
+                                <androidx.appcompat.widget.AppCompatButton
+                                    android:id="@+id/hotel_save_btn"
+                                    android:layout_width="100dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentEnd="true"
+                                    android:text="@string/save"
+                                    android:textAllCaps="false"
+                                    android:background="@drawable/button2"
+                                    android:textColor="@color/white"
+                                    android:textStyle="bold"
+                                    android:textSize="24sp"
+                                    android:padding="10dp"
+                                    android:enabled="false"
+                                    />
+
+                                <androidx.appcompat.widget.AppCompatButton
+                                    android:id="@+id/hotel_another"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/add_another"
+                                    android:textAllCaps="false"
+                                    android:background="@drawable/button2"
+                                    android:textColor="@color/white"
+                                    android:textStyle="bold"
+                                    android:textSize="22sp"
+                                    android:padding="10dp"
+                                    android:enabled="false"
+                                    />
+
+                            </RelativeLayout>
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/part4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="10dp"
+                    >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#F5FBFB">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:layout_margin="20dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/restaurant"
+                                android:textColor="@color/black"
+                                android:fontFamily="@font/baloo"
+                                android:textSize="20sp"/>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:hint="@string/name"
+                                app:boxStrokeColor="@color/text"
+                                app:boxStrokeWidthFocused="2dp"
+                                app:hintTextColor="@color/black"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                >
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/rest_name"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="text"
+                                    android:textColor="@color/black"
+                                    tools:ignore="SpeakableTextPresentCheck" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:hint="@string/url"
+                                app:boxStrokeColor="@color/text"
+                                app:boxStrokeWidthFocused="2dp"
+                                app:hintTextColor="@color/black"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                >
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/rest_lat"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="text"
+                                    android:textColor="@color/black"
+                                    tools:ignore="SpeakableTextPresentCheck" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                >
+                                <androidx.appcompat.widget.AppCompatButton
+                                    android:id="@+id/rest_save_btn"
+                                    android:layout_width="100dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentEnd="true"
+                                    android:text="@string/save"
+                                    android:textAllCaps="false"
+                                    android:background="@drawable/button2"
+                                    android:textColor="@color/white"
+                                    android:textStyle="bold"
+                                    android:textSize="24sp"
+                                    android:padding="10dp"
+                                    android:enabled="false"
+                                    />
+
+                                <androidx.appcompat.widget.AppCompatButton
+                                    android:id="@+id/rest_another_btn"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/add_another"
+                                    android:textAllCaps="false"
+                                    android:background="@drawable/button2"
+                                    android:textColor="@color/white"
+                                    android:textStyle="bold"
+                                    android:textSize="22sp"
+                                    android:padding="10dp"
+                                    android:enabled="false"
+                                    />
+
+                            </RelativeLayout>
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/part5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="10dp"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#F5FBFb">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:layout_margin="20dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/atm_bank"
+                                android:textColor="@color/black"
+                                android:fontFamily="@font/baloo"
+                                android:textSize="20sp"/>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:hint="@string/name"
+                                app:boxStrokeColor="@color/text"
+                                app:boxStrokeWidthFocused="2dp"
+                                app:hintTextColor="@color/black"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                >
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/bank_name"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="text"
+                                    android:textColor="@color/black"
+                                    tools:ignore="SpeakableTextPresentCheck" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:hint="@string/url"
+                                app:boxStrokeColor="@color/text"
+                                app:boxStrokeWidthFocused="2dp"
+                                app:hintTextColor="@color/black"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                >
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/bank_lat"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="text"
+                                    android:textColor="@color/black"
+                                    tools:ignore="SpeakableTextPresentCheck" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                >
+                                <androidx.appcompat.widget.AppCompatButton
+                                    android:id="@+id/bank_save_btn"
+                                    android:layout_width="100dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentEnd="true"
+                                    android:text="@string/save"
+                                    android:textAllCaps="false"
+                                    android:background="@drawable/button2"
+                                    android:textColor="@color/white"
+                                    android:textStyle="bold"
+                                    android:textSize="24sp"
+                                    android:padding="10dp"
+                                    android:enabled="false"
+                                    />
+
+                                <androidx.appcompat.widget.AppCompatButton
+                                    android:id="@+id/bank_another_btn"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/add_another"
+                                    android:textAllCaps="false"
+                                    android:background="@drawable/button2"
+                                    android:textColor="@color/white"
+                                    android:textStyle="bold"
+                                    android:textSize="22sp"
+                                    android:padding="10dp"
+                                    android:enabled="false"
+                                    />
+
+                            </RelativeLayout>
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/part6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="10dp"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#F5FBFB">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:layout_margin="20dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/hospital"
+                                android:textColor="@color/black"
+                                android:fontFamily="@font/baloo"
+                                android:textSize="20sp"/>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:hint="@string/name"
+                                app:boxStrokeColor="@color/text"
+                                app:boxStrokeWidthFocused="2dp"
+                                app:hintTextColor="@color/black"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                >
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/hosp_name"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="text"
+                                    android:textColor="@color/black"
+                                    tools:ignore="SpeakableTextPresentCheck" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:hint="@string/mobile_no"
+                                app:boxStrokeColor="@color/text"
+                                app:boxStrokeWidthFocused="2dp"
+                                app:hintTextColor="@color/black"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                >
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/hosp_phn"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="number"
+                                    android:textColor="@color/black"
+                                    tools:ignore="SpeakableTextPresentCheck" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:hint="@string/url"
+                                app:boxStrokeColor="@color/text"
+                                app:boxStrokeWidthFocused="2dp"
+                                app:hintTextColor="@color/black"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                >
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/hosp_lat"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="text"
+                                    android:textColor="@color/black"
+                                    tools:ignore="SpeakableTextPresentCheck" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                >
+                                <androidx.appcompat.widget.AppCompatButton
+                                    android:id="@+id/hosp_save_btn"
+                                    android:layout_width="100dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentEnd="true"
+                                    android:text="@string/save"
+                                    android:textAllCaps="false"
+                                    android:background="@drawable/button2"
+                                    android:textColor="@color/white"
+                                    android:textStyle="bold"
+                                    android:textSize="24sp"
+                                    android:padding="10dp"
+                                    android:enabled="false"
+                                    />
+
+                                <androidx.appcompat.widget.AppCompatButton
+                                    android:id="@+id/hosp_another_btn"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/add_another"
+                                    android:textAllCaps="false"
+                                    android:background="@drawable/button2"
+                                    android:textColor="@color/white"
+                                    android:textStyle="bold"
+                                    android:textSize="22sp"
+                                    android:padding="10dp"
+                                    android:enabled="false"
+                                    />
+
+                            </RelativeLayout>
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/part7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="10dp"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#F5FBFB">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:layout_margin="20dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/police_station"
+                                android:textColor="@color/black"
+                                android:fontFamily="@font/baloo"
+                                android:textSize="20sp"/>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:hint="@string/name"
+                                app:boxStrokeColor="@color/text"
+                                app:boxStrokeWidthFocused="2dp"
+                                app:hintTextColor="@color/black"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                >
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/pol_name"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="text"
+                                    android:textColor="@color/black"
+                                    tools:ignore="SpeakableTextPresentCheck" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:hint="@string/mobile_no"
+                                app:boxStrokeColor="@color/text"
+                                app:boxStrokeWidthFocused="2dp"
+                                app:hintTextColor="@color/black"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                >
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/pol_phn"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="number"
+                                    android:textColor="@color/black"
+                                    tools:ignore="SpeakableTextPresentCheck" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:hint="@string/url"
+                                app:boxStrokeColor="@color/text"
+                                app:boxStrokeWidthFocused="2dp"
+                                app:hintTextColor="@color/black"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                >
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/pol_lat"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="text"
+                                    android:textColor="@color/black"
+                                    tools:ignore="SpeakableTextPresentCheck" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                >
+                                <androidx.appcompat.widget.AppCompatButton
+                                    android:id="@+id/pol_save_btn"
+                                    android:layout_width="100dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentEnd="true"
+                                    android:text="@string/save"
+                                    android:textAllCaps="false"
+                                    android:background="@drawable/button2"
+                                    android:textColor="@color/white"
+                                    android:textStyle="bold"
+                                    android:textSize="24sp"
+                                    android:padding="10dp"
+                                    android:enabled="false"
+                                    />
+
+                                <androidx.appcompat.widget.AppCompatButton
+                                    android:id="@+id/pol_another_btn"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/add_another"
+                                    android:textAllCaps="false"
+                                    android:background="@drawable/button2"
+                                    android:textColor="@color/white"
+                                    android:textStyle="bold"
+                                    android:textSize="22sp"
+                                    android:padding="10dp"
+                                    android:enabled="false"
+                                    />
+
+                            </RelativeLayout>
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/part8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="10dp"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#F5FBFB">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:layout_margin="20dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/speciality"
+                                android:textColor="@color/black"
+                                android:fontFamily="@font/baloo"
+                                android:textSize="20sp"/>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:hint="@string/category"
+                                app:boxStrokeColor="@color/text"
+                                app:boxStrokeWidthFocused="2dp"
+                                app:hintTextColor="@color/black"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                >
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/sp_category"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="text"
+                                    android:textColor="@color/black"
+                                    tools:ignore="SpeakableTextPresentCheck" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:hint="@string/description_input"
+                                android:overScrollMode="always"
+                                android:scrollbarStyle="insideInset"
+                                android:scrollbars="vertical"
+                                app:boxStrokeColor="@color/text"
+                                app:boxStrokeWidthFocused="2dp"
+                                app:hintTextColor="@color/black"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/sp_descrp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="top"
+                                    android:inputType="textMultiLine"
+                                    android:lines="5"
+                                    android:textColor="@color/black"
+                                    tools:ignore="SpeakableTextPresentCheck" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                >
+                                <androidx.appcompat.widget.AppCompatButton
+                                    android:id="@+id/sp_save_btn"
+                                    android:layout_width="100dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentEnd="true"
+                                    android:text="@string/save"
+                                    android:textAllCaps="false"
+                                    android:background="@drawable/button2"
+                                    android:textColor="@color/white"
+                                    android:textStyle="bold"
+                                    android:textSize="24sp"
+                                    android:padding="10dp"
+                                    android:enabled="false"
+                                    />
+
+                                <androidx.appcompat.widget.AppCompatButton
+                                    android:id="@+id/sp_another_btn"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/add_another"
+                                    android:textAllCaps="false"
+                                    android:background="@drawable/button2"
+                                    android:textColor="@color/white"
+                                    android:textStyle="bold"
+                                    android:textSize="22sp"
+                                    android:padding="10dp"
+                                    android:enabled="false"
+                                    />
+
+                            </RelativeLayout>
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/last"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="10dp"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#F5FBFB">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:layout_margin="20dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/more_info"
+                                android:textColor="@color/black"
+                                android:fontFamily="@font/baloo"
+                                android:textSize="20sp"/>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:hint="@string/website_name"
+                                app:boxStrokeColor="@color/text"
+                                app:boxStrokeWidthFocused="2dp"
+                                app:hintTextColor="@color/black"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                >
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/more_info_name"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="text"
+                                    android:textColor="@color/black"
+                                    tools:ignore="SpeakableTextPresentCheck" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:hint="@string/url"
+                                app:boxStrokeColor="@color/text"
+                                app:boxStrokeWidthFocused="2dp"
+                                app:hintTextColor="@color/black"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                >
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/more_info_url"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="text"
+                                    android:textColor="@color/black"
+                                    tools:ignore="SpeakableTextPresentCheck" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                >
+                                <androidx.appcompat.widget.AppCompatButton
+                                    android:id="@+id/more_info_save_btn"
+                                    android:layout_width="100dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentEnd="true"
+                                    android:text="@string/save"
+                                    android:textAllCaps="false"
+                                    android:background="@drawable/button2"
+                                    android:textColor="@color/white"
+                                    android:textStyle="bold"
+                                    android:textSize="24sp"
+                                    android:padding="10dp"
+                                    android:enabled="false"
+                                    />
+
+                                <androidx.appcompat.widget.AppCompatButton
+                                    android:id="@+id/more_info_another"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/add_another"
+                                    android:textAllCaps="false"
+                                    android:background="@drawable/button2"
+                                    android:textColor="@color/white"
+                                    android:textStyle="bold"
+                                    android:textSize="22sp"
+                                    android:padding="10dp"
+                                    android:enabled="false"
+                                    />
+
+                            </RelativeLayout>
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+
+
+
+    </LinearLayout>
+
+</ScrollView>

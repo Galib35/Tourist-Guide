@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "872864728493",
+    "project_id": "ghuraghuri-c5140",
+    "storage_bucket": "ghuraghuri-c5140.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:872864728493:android:edeac43a71578064a60d24",
+        "android_client_info": {
+          "package_name": "com.example.ghuraghuri"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "872864728493-bi3vbnueg9esb0vcespf060d0f3k9789.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAY29N5J-S4z8AWR-2qYmJmJvjOIeNzc5I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "872864728493-bi3vbnueg9esb0vcespf060d0f3k9789.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

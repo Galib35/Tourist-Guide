@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="10dp"
+    app:cardCornerRadius="10dp"
+    android:layout_margin="5dp">
+
+    <ImageView
+        android:id="@+id/galleryImg"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:padding="7dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/tourism"
+        />
+
+</androidx.cardview.widget.CardView>

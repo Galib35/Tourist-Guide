@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    app:cardElevation="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F5FBFB">
+
+        <TextView
+            android:id="@+id/atr_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_1"
+            android:textSize="24sp"
+            android:fontFamily="@font/baloo"
+            android:textColor="@color/black"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView
+            android:id="@+id/atr_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/tourist_spots"
+            android:textSize="24sp"
+            android:fontFamily="@font/baloo"
+            android:layout_marginStart="5dp"
+            android:textColor="@color/black"
+            app:drawableEndCompat="@drawable/ic_baseline_arrow_forward_ios_24" />
+
+    </LinearLayout>
+
+
+
+
+</androidx.cardview.widget.CardView>
